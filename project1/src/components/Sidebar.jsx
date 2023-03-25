@@ -9,6 +9,7 @@ export const Sidebar = () => {
       />
 
       <div className={styles.profile}>
+        <img src="https://github.com/marcelovdsm.png" />
         <strong>Marcelo Victor</strong>
         <span>Web Developer</span>
       </div>
