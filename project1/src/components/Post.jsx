@@ -4,6 +4,13 @@ import { Comment } from './Comment'
 import styles from './Post.module.css'
 import { Avatar } from './Avatar'
 
+const comments = [
+  1,
+  2,
+  3,
+  4,
+]
+
 export const Post = ({ author, publishedAt, content }) => {
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
@@ -53,9 +60,9 @@ export const Post = ({ author, publishedAt, content }) => {
       </form>
 
       <div className={styles.commentList}>
-        <Comment />
-        <Comment />
-        <Comment />
+        {comments.map(comment => {
+          return <Comment />
+        })}
       </div>
     </article>
   )
